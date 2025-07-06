@@ -14,7 +14,7 @@ const path = require('path');
 
   // Go to login page
   await page.goto('https://www.deviantart.com/users/login');
-  //await page.screenshot({ path: 'screenshots/step1-login-page.png' });
+  await page.screenshot({ path: 'screenshots/step1-login-page.png' });
 
   // Login 
   await page.fill('input[name="username"]', '');
@@ -24,7 +24,7 @@ const path = require('path');
   await page.fill('input[name="password"]', '')
   await page.waitForTimeout(5000);
   await page.click('button[type="submit"]');
-  //await page.screenshot({ path: 'screenshots/step2-filled-credentials.png' });
+  await page.screenshot({ path: 'screenshots/step2-filled-credentials.png' });
   //Maybe Later
   await page.click('text=Maybe Later');
 
