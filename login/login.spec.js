@@ -1,13 +1,13 @@
-const { chromium } = require('playwright');
+const { test, expect, chromium } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
+//important to keep the same session
+test('DeviantArt login flow using persistent context', async () => {
+  const userDataDir = './user-data'; // Saves browser session locally
 
-(async () => {
-  // Persistent context = non-incognito
-  const userDataDir = './user-data'; // Local folder for browser profile
   const context = await chromium.launchPersistentContext(userDataDir, {
     headless: false,
-    viewport: { width: 1280, height: 800 },
+    viewport: { width: 1920, height: 1080 },
   });
 
   const page = context.pages()[0] || await context.newPage();
@@ -16,26 +16,25 @@ const path = require('path');
   await page.goto('https://www.deviantart.com/users/login');
   await page.screenshot({ path: 'screenshots/step1-login-page.png' });
 
-  // Login 
-  await page.fill('input[name="username"]', '');
+  // Login
+  await page.fill('input[name="username"]', 'clearskyenjoyer');
   await page.waitForTimeout(5000);
   await page.click('button[type="submit"]');
-  //Password
-  await page.fill('input[name="password"]', '')
+
+  // Password
+  await page.fill('input[name="password"]', 'ArinaPukaPuka1999');
   await page.waitForTimeout(5000);
   await page.click('button[type="submit"]');
+
   await page.screenshot({ path: 'screenshots/step2-filled-credentials.png' });
-  //Maybe Later
+
+  // "Maybe Later" button
   await page.click('text=Maybe Later');
 
-  // Click submit
+  // Click submit (final step?)
   await page.click('button[type="submit"]');
-  await page.waitForLoadState('networkidle'); // Wait for page to settle
-  await page.waitForTimeout(3000); // Optional wait for visual stability
+  await page.waitForLoadState('networkidle');
+  await page.waitForTimeout(3000);
 
-  // Take screenshot after login
-  await page.screenshot({ path: 'screenshots/step3-after-login.png' });
-
-  // Optionally close the browser
   await context.close();
-})();
+});
