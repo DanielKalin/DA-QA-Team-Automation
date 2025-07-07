@@ -17,12 +17,12 @@ test('DeviantArt login flow using persistent context', async () => {
   await page.screenshot({ path: 'screenshots/step1-login-page.png' });
 
   // Login
-  await page.fill('input[name="username"]', 'clearskyenjoyer');
+  await page.fill('input[name="username"]', '');
   await page.waitForTimeout(5000);
   await page.click('button[type="submit"]');
 
   // Password
-  await page.fill('input[name="password"]', 'ArinaPukaPuka1999');
+  await page.fill('input[name="password"]', '');
   await page.waitForTimeout(5000);
   await page.click('button[type="submit"]');
 
