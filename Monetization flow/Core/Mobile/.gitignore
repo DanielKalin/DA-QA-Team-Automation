@@ -1,5 +1,7 @@
 # Test artifacts and generated files
-storage/
 screenshots/
+storage/
 test-results/
-credentials.json
+
+# OS generated files
+.DS_Store
