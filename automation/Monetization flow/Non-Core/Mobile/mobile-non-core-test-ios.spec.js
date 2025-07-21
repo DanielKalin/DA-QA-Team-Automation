@@ -1,23 +1,22 @@
-// mobile/mobile-non-core-test-android.spec.js
+// mobile/mobile-non-core-test-ios.spec.js
 const { test, expect } = require('@playwright/test');
 
-test.describe('Non-Core Flow - Android', () => {
+test.describe('Non-Core Flow - iOS', () => {
 
-  test('Non-Core Flow on Android', async ({ browser }) => {
-    console.log('Running Non-Core Flow on Android...');
+  test('Non-Core Flow on iOS', async ({ browser }) => {
+    console.log('Running Non-Core Flow on iOS...');
     
     const expectedTitles = ['Core Pro+ Member', 'Core+ Member', 'Core Pro Member', 'Core Max Member'];
     
-    // Create Android context
+    // Create iOS context
     const context = await browser.newContext({
-      viewport: { width: 480, height: 1029 },
+      viewport: { width: 430, height: 932 },
       deviceScaleFactor: 3,
       isMobile: true,
       hasTouch: true,
       locale: 'en-US',
       timezoneId: 'America/New_York',
-      userAgent: 'Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
-      storageState: 'storage/mobile-state.json'
+      userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1'
     });
     
     const page = await context.newPage();
@@ -47,11 +46,11 @@ test.describe('Non-Core Flow - Android', () => {
     logStep(1, 'Visiting core membership page...');
     await page.goto('https://www.deviantart.com/core-membership');
     await page.waitForLoadState('networkidle');
-    logSuccess('Android page loaded');
+    logSuccess('iOS page loaded');
     
     await page.screenshot({ 
-      path: `screenshots/android-non-core-membership-main-${timestamp}.png`,
-      clip: { x: 0, y: 0, width: 480, height: 900 }
+      path: `screenshots/ios-non-core-membership-main-${timestamp}.png`,
+      clip: { x: 0, y: 0, width: 430, height: 800 }
     });
     
     // 2. Check "Upgrade to" title and CORE icon
@@ -142,8 +141,8 @@ test.describe('Non-Core Flow - Android', () => {
     
     if (!billingModalExists) {
       await page.screenshot({ 
-        path: `screenshots/android-non-core-billing-modal-debug-${timestamp}.png`, 
-        clip: { x: 0, y: 0, width: 480, height: 900 }
+        path: `screenshots/ios-non-core-billing-modal-debug-${timestamp}.png`, 
+        clip: { x: 0, y: 0, width: 430, height: 800 }
       });
       throw new Error('Billing cycle modal did not open');
     }
@@ -190,8 +189,8 @@ test.describe('Non-Core Flow - Android', () => {
     expect(finalPriceExists || pageText?.includes('final price')).toBeTruthy();
     
     await page.screenshot({ 
-      path: `screenshots/android-non-core-billing-cycle-modal-${timestamp}.png`, 
-      clip: { x: 0, y: 0, width: 480, height: 900 }
+      path: `screenshots/ios-non-core-billing-cycle-modal-${timestamp}.png`, 
+      clip: { x: 0, y: 0, width: 430, height: 800 }
     });
     
     // 10. Tap "Go to Checkout" button
@@ -209,8 +208,8 @@ test.describe('Non-Core Flow - Android', () => {
         logSuccess('Tapped checkout button (alternative selector)');
       } else {
         await page.screenshot({ 
-          path: `screenshots/android-non-core-checkout-button-debug-${timestamp}.png`, 
-          clip: { x: 0, y: 0, width: 480, height: 900 }
+          path: `screenshots/ios-non-core-checkout-button-debug-${timestamp}.png`, 
+          clip: { x: 0, y: 0, width: 430, height: 800 }
         });
         throw new Error('Go to Checkout button not found');
       }
@@ -250,8 +249,8 @@ test.describe('Non-Core Flow - Android', () => {
       console.log(`📱 Join page: ${isJoinPage}, Has referer: ${hasReferer}, Has purchase ID: ${hasPurchaseId}`);
       
       await page.screenshot({ 
-        path: `screenshots/android-non-core-redirect-debug-${timestamp}.png`, 
-        clip: { x: 0, y: 0, width: 480, height: 900 }
+        path: `screenshots/ios-non-core-redirect-debug-${timestamp}.png`, 
+        clip: { x: 0, y: 0, width: 430, height: 800 }
       });
       
       // Still expect basic redirect to join page
@@ -259,11 +258,11 @@ test.describe('Non-Core Flow - Android', () => {
     }
     
     await page.screenshot({ 
-      path: `screenshots/android-non-core-join-page-${timestamp}.png`, 
-      clip: { x: 0, y: 0, width: 480, height: 900 }
+      path: `screenshots/ios-non-core-join-page-${timestamp}.png`, 
+      clip: { x: 0, y: 0, width: 430, height: 800 }
     });
     
-    logSuccess('Non-Core Flow on Android test completed!');
+    logSuccess('Non-Core Flow on iOS test completed!');
     await context.close();
   });
 }); 

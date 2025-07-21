@@ -6,7 +6,7 @@ const path = require('path');
 // Try to import credentials from parent directory
 let credentials;
 try {
-  credentials = require('../credentials.json');
+  credentials = require('./credentials.json');
 } catch (error) {
   console.error('❌ credentials.json not found. Please create credentials.json in the parent directory with:');
   console.error('{ "username": "your_username", "password": "your_password" }');
