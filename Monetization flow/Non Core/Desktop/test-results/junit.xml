@@ -1,0 +1,398 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="8.504931000000001">
+<testsuite name="pp-non-sale-enhanced.spec.js" timestamp="2025-07-23T16:27:16.483Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="6.928" errors="0">
+<testcase name="DeviantArt Core Membership Page - Non Sale › should load the page correctly and match current layout" classname="pp-non-sale-enhanced.spec.js" time="6.928">
+<system-out>
+<![CDATA[
+🔍 TEST SUITE 1: Page Load & Network Idle - Testing...
+
+✅ TEST SUITE 1: Page Load & Network Idle - PASS
+   Page loaded successfully and network idle state reached
+
+🔍 TEST SUITE 2: Title Verification (Main + Sub) - Testing...
+
+✅ TEST SUITE 2: Title Verification (Main + Sub) - PASS
+   Main title (with Core image) and subtitle found and visible
+
+🔍 TEST SUITE 3: Core Table Container Order - Testing...
+Using advanced container detection strategies...
+⚠️ XPath strategy failed, using direct text strategy
+DEBUG - Container coordinates:
+  Core+: x=0, y=0
+  Pro: x=0, y=0
+  Pro+: x=0, y=0
+  Max: x=0, y=0
+
+✅ TEST SUITE 3: Core Table Container Order - PASS
+   Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+
+🔍 TEST SUITE 4: Plan Icons Verification - Testing...
+
+✅ TEST SUITE 4: Plan Icons Verification - PASS
+   Core+: Found | Pro: Found | Pro+: Found | Max: Found
+
+🔍 TEST SUITE 5: Sub-titles & Pricing Verification - Testing...
+
+✅ TEST SUITE 5: Sub-titles & Pricing Verification - PASS
+   Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+
+🔍 TEST SUITE 6: Upgrade Buttons Verification - Testing...
+✓ Popular label found and visible
+✓ Popular label and Pro+ container both found - spatial relationship confirmed visually
+✓ Pro+ "Upgrade Now" button found
+✓ Core+ "Upgrade" button found
+✓ Pro "Upgrade" button found
+✓ Max "Upgrade" button found
+
+✅ TEST SUITE 6: Upgrade Buttons Verification - PASS
+   All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+
+📸 Taking screenshot after Test Suite 6...
+✓ Screenshot saved: Screenshots/pp-non-sale-after-suite6-chromium-2025-07-23T16-27-20.png
+
+🔍 TEST SUITE 7: Benefit Sections Order - Testing...
+Testing strategy: heading-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: text-based-heading...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: class-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: xpath-ancestor...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=789.484375
+    2. "Manage Your Content with Studio" at y=1473.484375
+    3. "Create AI Art with DreamUp" at y=1821.484375
+    4. "Enhance and Customize Your Profile" at y=2225.484375
+  Strategy score: 32 (found: 4, distinct: true, gap: 479px)
+  ✓ New best strategy: xpath-ancestor (score: 32)
+Testing strategy: generic-container...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=0
+    2. "Manage Your Content with Studio" at y=0
+    3. "Create AI Art with DreamUp" at y=0
+    4. "Enhance and Customize Your Profile" at y=0
+  Strategy score: 22 (found: 4, distinct: false, gap: 0px)
+Testing strategy: direct-text-search...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=789.484375
+    2. "Manage Your Content with Studio" at y=1473.484375
+    3. "Create AI Art with DreamUp" at y=1821.484375
+    4. "Enhance and Customize Your Profile" at y=2225.484375
+  Strategy score: 30 (found: 4, distinct: true, gap: 479px)
+
+✅ TEST SUITE 7: Benefit Sections Order - PASS
+   Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+
+🔍 TEST SUITE 8: Disclaimer Text Verification - Testing...
+
+✅ TEST SUITE 8: Disclaimer Text Verification - PASS
+   Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+
+🔍 TEST SUITE 9: Pro+ Cycle Picker verification - Testing...
+
+✅ TEST SUITE 9: Pro+ Cycle Picker verification - PASS
+   Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-chromium-2025-07-23T16-27-22.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+
+================================================================================
+🎯 DEVIANTART CORE MEMBERSHIP TEST - FINAL REPORT
+================================================================================
+📅 Test Date: 7/23/2025
+⏰ Test Time: 7:27:23 PM
+⏱️ Duration: 6.72 seconds
+🌐 Browser: chromium
+📊 Overall Status: ✅ PASSED
+📈 Results: 9 PASSED, 0 FAILED
+
+📋 DETAILED TEST SUITE RESULTS:
+  ✅ Test Suite 1: Page Load & Network Idle - PASS
+      Page loaded successfully and network idle state reached
+  ✅ Test Suite 2: Title Verification (Main + Sub) - PASS
+      Main title (with Core image) and subtitle found and visible
+  ✅ Test Suite 3: Core Table Container Order - PASS
+      Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+  ✅ Test Suite 4: Plan Icons Verification - PASS
+      Core+: Found | Pro: Found | Pro+: Found | Max: Found
+  ✅ Test Suite 5: Sub-titles & Pricing Verification - PASS
+      Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+  ✅ Test Suite 6: Upgrade Buttons Verification - PASS
+      All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+  ✅ Test Suite 7: Benefit Sections Order - PASS
+      Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+  ✅ Test Suite 8: Disclaimer Text Verification - PASS
+      Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+  ✅ Test Suite 9: Pro+ Cycle Picker verification - PASS
+      Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-chromium-2025-07-23T16-27-22.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+🔄 Browsers completed: chromium, webkit (2/3)
+
+================================================================================
+🏁 TEST EXECUTION COMPLETED
+================================================================================
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="pp-non-sale-enhanced.spec.js" timestamp="2025-07-23T16:27:16.483Z" hostname="Safari" tests="1" failures="0" skipped="0" time="5.655" errors="0">
+<testcase name="DeviantArt Core Membership Page - Non Sale › should load the page correctly and match current layout" classname="pp-non-sale-enhanced.spec.js" time="5.655">
+<system-out>
+<![CDATA[
+🔍 TEST SUITE 1: Page Load & Network Idle - Testing...
+
+✅ TEST SUITE 1: Page Load & Network Idle - PASS
+   Page loaded successfully and network idle state reached
+
+🔍 TEST SUITE 2: Title Verification (Main + Sub) - Testing...
+
+✅ TEST SUITE 2: Title Verification (Main + Sub) - PASS
+   Main title (with Core image) and subtitle found and visible
+
+🔍 TEST SUITE 3: Core Table Container Order - Testing...
+Using advanced container detection strategies...
+⚠️ XPath strategy failed, using direct text strategy
+DEBUG - Container coordinates:
+  Core+: x=0, y=0
+  Pro: x=0, y=0
+  Pro+: x=0, y=0
+  Max: x=0, y=0
+
+✅ TEST SUITE 3: Core Table Container Order - PASS
+   Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+
+🔍 TEST SUITE 4: Plan Icons Verification - Testing...
+
+✅ TEST SUITE 4: Plan Icons Verification - PASS
+   Core+: Found | Pro: Found | Pro+: Found | Max: Found
+
+🔍 TEST SUITE 5: Sub-titles & Pricing Verification - Testing...
+
+✅ TEST SUITE 5: Sub-titles & Pricing Verification - PASS
+   Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+
+🔍 TEST SUITE 6: Upgrade Buttons Verification - Testing...
+✓ Popular label found and visible
+✓ Popular label and Pro+ container both found - spatial relationship confirmed visually
+✓ Pro+ "Upgrade Now" button found
+✓ Core+ "Upgrade" button found
+✓ Pro "Upgrade" button found
+✓ Max "Upgrade" button found
+
+✅ TEST SUITE 6: Upgrade Buttons Verification - PASS
+   All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+
+📸 Taking screenshot after Test Suite 6...
+✓ Screenshot saved: Screenshots/pp-non-sale-after-suite6-webkit-2025-07-23T16-27-19.png
+
+🔍 TEST SUITE 7: Benefit Sections Order - Testing...
+Testing strategy: heading-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: text-based-heading...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: class-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: xpath-ancestor...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=788
+    2. "Manage Your Content with Studio" at y=1472
+    3. "Create AI Art with DreamUp" at y=1820
+    4. "Enhance and Customize Your Profile" at y=2224
+  Strategy score: 32 (found: 4, distinct: true, gap: 479px)
+  ✓ New best strategy: xpath-ancestor (score: 32)
+Testing strategy: generic-container...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=0
+    2. "Manage Your Content with Studio" at y=0
+    3. "Create AI Art with DreamUp" at y=0
+    4. "Enhance and Customize Your Profile" at y=0
+  Strategy score: 22 (found: 4, distinct: false, gap: 0px)
+Testing strategy: direct-text-search...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=788
+    2. "Manage Your Content with Studio" at y=1472
+    3. "Create AI Art with DreamUp" at y=1820
+    4. "Enhance and Customize Your Profile" at y=2224
+  Strategy score: 30 (found: 4, distinct: true, gap: 479px)
+
+✅ TEST SUITE 7: Benefit Sections Order - PASS
+   Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+
+🔍 TEST SUITE 8: Disclaimer Text Verification - Testing...
+
+✅ TEST SUITE 8: Disclaimer Text Verification - PASS
+   Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+
+🔍 TEST SUITE 9: Pro+ Cycle Picker verification - Testing...
+
+✅ TEST SUITE 9: Pro+ Cycle Picker verification - PASS
+   Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-webkit-2025-07-23T16-27-21.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+
+================================================================================
+🎯 DEVIANTART CORE MEMBERSHIP TEST - FINAL REPORT
+================================================================================
+📅 Test Date: 7/23/2025
+⏰ Test Time: 7:27:22 PM
+⏱️ Duration: 5.33 seconds
+🌐 Browser: webkit
+📊 Overall Status: ✅ PASSED
+📈 Results: 9 PASSED, 0 FAILED
+
+📋 DETAILED TEST SUITE RESULTS:
+  ✅ Test Suite 1: Page Load & Network Idle - PASS
+      Page loaded successfully and network idle state reached
+  ✅ Test Suite 2: Title Verification (Main + Sub) - PASS
+      Main title (with Core image) and subtitle found and visible
+  ✅ Test Suite 3: Core Table Container Order - PASS
+      Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+  ✅ Test Suite 4: Plan Icons Verification - PASS
+      Core+: Found | Pro: Found | Pro+: Found | Max: Found
+  ✅ Test Suite 5: Sub-titles & Pricing Verification - PASS
+      Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+  ✅ Test Suite 6: Upgrade Buttons Verification - PASS
+      All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+  ✅ Test Suite 7: Benefit Sections Order - PASS
+      Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+  ✅ Test Suite 8: Disclaimer Text Verification - PASS
+      Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+  ✅ Test Suite 9: Pro+ Cycle Picker verification - PASS
+      Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-webkit-2025-07-23T16-27-21.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+🔄 Browsers completed: webkit (1/3)
+
+================================================================================
+🏁 TEST EXECUTION COMPLETED
+================================================================================
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="pp-non-sale-enhanced.spec.js" timestamp="2025-07-23T16:27:16.483Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="7.52" errors="0">
+<testcase name="DeviantArt Core Membership Page - Non Sale › should load the page correctly and match current layout" classname="pp-non-sale-enhanced.spec.js" time="7.52">
+<system-out>
+<![CDATA[
+🔍 TEST SUITE 1: Page Load & Network Idle - Testing...
+
+✅ TEST SUITE 1: Page Load & Network Idle - PASS
+   Page loaded successfully and network idle state reached
+
+🔍 TEST SUITE 2: Title Verification (Main + Sub) - Testing...
+
+✅ TEST SUITE 2: Title Verification (Main + Sub) - PASS
+   Main title (with Core image) and subtitle found and visible
+
+🔍 TEST SUITE 3: Core Table Container Order - Testing...
+Using advanced container detection strategies...
+⚠️ XPath strategy failed, using direct text strategy
+DEBUG - Container coordinates:
+  Core+: x=0, y=0
+  Pro: x=0, y=0
+  Pro+: x=0, y=0
+  Max: x=0, y=0
+
+✅ TEST SUITE 3: Core Table Container Order - PASS
+   Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+
+🔍 TEST SUITE 4: Plan Icons Verification - Testing...
+
+✅ TEST SUITE 4: Plan Icons Verification - PASS
+   Core+: Found | Pro: Found | Pro+: Found | Max: Found
+
+🔍 TEST SUITE 5: Sub-titles & Pricing Verification - Testing...
+
+✅ TEST SUITE 5: Sub-titles & Pricing Verification - PASS
+   Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+
+🔍 TEST SUITE 6: Upgrade Buttons Verification - Testing...
+✓ Popular label found and visible
+✓ Popular label and Pro+ container both found - spatial relationship confirmed visually
+✓ Pro+ "Upgrade Now" button found
+✓ Core+ "Upgrade" button found
+✓ Pro "Upgrade" button found
+✓ Max "Upgrade" button found
+
+✅ TEST SUITE 6: Upgrade Buttons Verification - PASS
+   All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+
+📸 Taking screenshot after Test Suite 6...
+✓ Screenshot saved: Screenshots/pp-non-sale-after-suite6-firefox-2025-07-23T16-27-20.png
+
+🔍 TEST SUITE 7: Benefit Sections Order - Testing...
+Testing strategy: heading-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: text-based-heading...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: class-based...
+  Strategy score: 5 (found: 0, distinct: true, gap: 0px)
+Testing strategy: xpath-ancestor...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=789.5
+    2. "Manage Your Content with Studio" at y=1473.5
+    3. "Create AI Art with DreamUp" at y=1821.5
+    4. "Enhance and Customize Your Profile" at y=2225.5
+  Strategy score: 32 (found: 4, distinct: true, gap: 479px)
+  ✓ New best strategy: xpath-ancestor (score: 32)
+Testing strategy: generic-container...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=0
+    2. "Manage Your Content with Studio" at y=0
+    3. "Create AI Art with DreamUp" at y=0
+    4. "Enhance and Customize Your Profile" at y=0
+  Strategy score: 22 (found: 4, distinct: false, gap: 0px)
+Testing strategy: direct-text-search...
+  Found 4 sections with coordinates:
+    1. "Promote and Monetize Your Work" at y=789.5
+    2. "Manage Your Content with Studio" at y=1473.5
+    3. "Create AI Art with DreamUp" at y=1821.5
+    4. "Enhance and Customize Your Profile" at y=2225.5
+  Strategy score: 30 (found: 4, distinct: true, gap: 479px)
+
+✅ TEST SUITE 7: Benefit Sections Order - PASS
+   Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+
+🔍 TEST SUITE 8: Disclaimer Text Verification - Testing...
+
+✅ TEST SUITE 8: Disclaimer Text Verification - PASS
+   Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+
+🔍 TEST SUITE 9: Pro+ Cycle Picker verification - Testing...
+
+✅ TEST SUITE 9: Pro+ Cycle Picker verification - PASS
+   Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-firefox-2025-07-23T16-27-23.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+
+================================================================================
+🎯 DEVIANTART CORE MEMBERSHIP TEST - FINAL REPORT
+================================================================================
+📅 Test Date: 7/23/2025
+⏰ Test Time: 7:27:24 PM
+⏱️ Duration: 7.10 seconds
+🌐 Browser: firefox
+📊 Overall Status: ✅ PASSED
+📈 Results: 9 PASSED, 0 FAILED
+
+📋 DETAILED TEST SUITE RESULTS:
+  ✅ Test Suite 1: Page Load & Network Idle - PASS
+      Page loaded successfully and network idle state reached
+  ✅ Test Suite 2: Title Verification (Main + Sub) - PASS
+      Main title (with Core image) and subtitle found and visible
+  ✅ Test Suite 3: Core Table Container Order - PASS
+      Order verified: Core+ > Pro > Pro+ > Max | Strategy: Direct text
+  ✅ Test Suite 4: Plan Icons Verification - PASS
+      Core+: Found | Pro: Found | Pro+: Found | Max: Found
+  ✅ Test Suite 5: Sub-titles & Pricing Verification - PASS
+      Create and connect with fans: $6.67/mo | Promote and sell your art: $8.33/mo | Grow your sales and profits: $12.50/mo | Level up your business: $16.67/mo
+  ✅ Test Suite 6: Upgrade Buttons Verification - PASS
+      All 5 checks passed | Popular above Pro+: ✓ | Pro+ Upgrade Now: ✓ | Core+ Upgrade: ✓ | Pro Upgrade: ✓ | Max Upgrade: ✓
+  ✅ Test Suite 7: Benefit Sections Order - PASS
+      Expected: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Found: Promote and Monetize Your Work > Manage Your Content with Studio > Create AI Art with DreamUp > Enhance and Customize Your Profile | Strategy: xpath-ancestor
+  ✅ Test Suite 8: Disclaimer Text Verification - PASS
+      Expected: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Found: "Displayed prices are for yearly subscriptions, paid in full at the time of purchase. The final price can be seen on the purchase page, before payment is completed." | Status: Exact match verified
+  ✅ Test Suite 9: Pro+ Cycle Picker verification - PASS
+      Modal components verified: 11/11 | Screenshot: Screenshots/pp-non-sale-modal-loaded-firefox-2025-07-23T16-27-23.png | ✓ Modal Title: Found and visible | ✓ Modal Subtitle: Found and visible | ✓ Yearly Option: Found and visible | ✓ Yearly Price: Found and visible | ✓ Yearly Multiplier: Found and visible | ✓ Yearly Savings: Found and visible | ✓ Monthly Option: Found and visible | ✓ Monthly Price: Found and visible | ✓ Monthly Period: Found and visible | ✓ Go to Checkout Button: Found, visible, and enabled | ✓ Footer Disclaimer: Found and visible
+🔄 Browsers completed: chromium, firefox, webkit (3/3)
+🎯 All browsers completed - Generating consolidated report...
+
+📊 Consolidated HTML Report generated: Reports/pp-non-sale-consolidated-report-2025-07-23T16-27-24.html
+
+================================================================================
+🏁 TEST EXECUTION COMPLETED
+================================================================================
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
